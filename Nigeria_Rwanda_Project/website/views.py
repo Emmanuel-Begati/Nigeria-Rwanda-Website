@@ -27,6 +27,5 @@ def login(request):
 def user_logout(request):
     logout(request)
     return redirect('login')
-    return render(request, 'website/login.html')
 def sign_up(request):
     return render(request, 'website/sign_up.html')
