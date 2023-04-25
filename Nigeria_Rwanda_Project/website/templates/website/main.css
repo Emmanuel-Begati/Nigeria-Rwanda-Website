@@ -213,8 +213,6 @@ footer .btn {
 }
 
 .about-us-graphic {
-  background-image: url("{% static 'website/viktor-forgacs-aPC8ygu3bWA-unsplash.jpg' %}");
-
   background-size: cover;
   height: 400px;
   position: relative;
