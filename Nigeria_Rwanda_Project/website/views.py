@@ -21,10 +21,12 @@ def login(request):
             return redirect('home')
         else:
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
+     else: 
+         return render(request, 'website/login.html')
         
 @login_required
 def user_logout(request):
     logout(request)
-    return redirect('login')
+    return redirect('website/login')
 def sign_up(request):
     return render(request, 'website/sign_up.html')
