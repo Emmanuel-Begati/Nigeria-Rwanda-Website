@@ -1,5 +1,6 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from django.contrib.auth import authenticate
+from django.contrib.auth.decorators import login_required
 
 
 
@@ -20,9 +21,7 @@ def login(request):
             return redirect('home')
         else:
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
-    else:
-        return render(request, 'login.html')
-
+        
 @login_required
 def user_logout(request):
     logout(request)
