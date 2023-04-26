@@ -51,7 +51,7 @@
 				<ul class="navbar-nav ml-auto">
 				  {% if user.is_authenticated %}
 					<li class="nav-item">
-					  <form method="post" action="{% url 'website-logout' %}">
+					  <form method="post" >
 						{% csrf_token %}
 						<button type="submit" class="nav-link btn btn-success">Logout</button>
 					  </form>
