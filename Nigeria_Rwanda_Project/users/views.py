@@ -12,8 +12,8 @@ def sign_up(request):
             # process form data and save to database
             form.save()
             username = form.cleaned_data.get('first_name')
-            messages.success(request, f'Account created for {username}')
-            return redirect('website-home')
+            messages.success(request, f'Your account has been created! You are now able to login')
+            return redirect('website-login')
     else:
         form = SignUpForm()
     return render(request, 'website/sign_up.html', {'form': form})
