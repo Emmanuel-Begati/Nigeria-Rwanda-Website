@@ -37,16 +37,30 @@
 			</ul>
 			</div>
 			<div style="margin-right: 100px;">
-			  <ul class="navbar-nav ml-auto">
-				<li class="nav-item ">
-					<a class="nav-link btn btn-success" href="{% url 'website-login' %}">Login/Register</a>
-				</li>
-			  </ul>
-			</div>
+				
+				  <ul class="navbar-nav ml-auto">
+					<li class="nav-item ">
+					  <a class="nav-link btn btn-success" href="{% url 'website-login' %}">Login/Register</a>
+					</li>
+				  </ul>
+			
+			  </div>
+			
 		</nav>		
+			<div class="container col-md-4 " >
+				{% if messages %}
+				{%for message in messages%}
+					<div class="alert alert-success">
+						{{ message }}
+					</div>
+				{% endfor %}
+			{% endif %}
+			</div>
 			<div id="whole">  
+				
 			  {% block content %} {% endblock %}
 			  </div>
+			 
 			<footer class="text-light py-3" id="footer">
 				<div class="container">
 				  <div class="row">

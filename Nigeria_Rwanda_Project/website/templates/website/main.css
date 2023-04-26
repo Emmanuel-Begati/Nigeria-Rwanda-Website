@@ -48,6 +48,9 @@ nav .btn:hover{
   background-color: #a7b65e !important;
 
 }
+.alert{
+  background-color: #e1e9b8;
+}
 nav a {
   display: block;
   padding: 0px;
@@ -99,10 +102,16 @@ max-height: 100%;}
   }
  
 }
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 div .bg-image {
-  background-image: url('https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGludmVzdG1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
   background-size: cover;
   background-position: center;
   height: 600px;
@@ -110,7 +119,7 @@ div .bg-image {
   /* max-width: 100%; */
   max-height: 100%;
   margin-left:-107px;
-  margin-top: 50px;
+  margin-top: 100;
   position: relative;
   }
 div .content {
@@ -154,15 +163,15 @@ footer .btn {
 #learn-more{
   text-align: center;
   font-size: x-large;
-}
-
-#sign-up{
+ }
+/* #sign-up{
   padding: 200px;
   margin-bottom: 300px;
   width: 1000px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* add a box-shadow */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* add a box-shadow 
 
-}
+} */
+
 @media screen and (max-width: 768px) {
   div .bg-image {
     height: 300px;
@@ -211,7 +220,6 @@ footer .btn {
 }
 
 .about-us-graphic {
-  background-image: url('./static/viktor-forgacs-aPC8ygu3bWA-unsplash.jpg');
   background-size: cover;
   height: 400px;
   position: relative;
@@ -527,57 +535,45 @@ h2 {
   transform: scale(1.1);
 }
 
-  /* Center the form */
-  #sign-up form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-  
-  #sign-up form input[type="text"], 
-  #sign-up form input[type="password"], 
-  #sign-up form input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #bccebd;
-  }
-  
-  #sign-up form input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #3fb553;
-    color: #65df55;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  #sign-up form input[type="submit"]:hover {
-    background-color: #142c12;
-  }
-  
-  #sign-up form label {
-    color: #416d45;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .alert {
-    margin-top: 30px;
-    font-size: 14px;
-    color: #0c0808;
-    background-color:rgb(47, 196, 47);
-  }
-  
-  .alert a {
-    color: #3f51b5;
-    text-decoration: none;
-  }
-  
-  .alert a:hover {
-    text-decoration: underline;
-  }
-  
+
+/* Center the form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the form fields */
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+/* Style the button */
+.signup-form button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Hover effect on the button */
+.signup-form button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+/* Style the alert box */
+.alert {
+  text-align: center;
+  margin-top: 20px;
+}
+
