@@ -53,6 +53,7 @@
 					<li class="nav-item">
 					  <form method="post" >
 						{% csrf_token %}
+						<a class="nav-link btn btn-success" href="{% url 'website-profile' %}">Profile</a>
 						<a class="nav-link btn btn-success" href="{% url 'website-logout' %}">Logout</a>
 					  </form>
 					</li>
