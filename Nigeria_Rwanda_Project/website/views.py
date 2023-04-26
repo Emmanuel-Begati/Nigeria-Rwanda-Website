@@ -18,9 +18,14 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')
+            return redirect('website-home')
         else:
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
      else: 
          return render(request, 'website/login.html')
         
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('website-home')

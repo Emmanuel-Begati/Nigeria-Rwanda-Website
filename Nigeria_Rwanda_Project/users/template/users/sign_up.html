@@ -1,0 +1,26 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<link href="{% static 'website/main.css' %}" rel="stylesheet">
+
+
+  <div class="container mt-5" id="sign-up">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">Sign Up</h2>
+        <form method="POST" class="signup-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </div>
+        </form>
+        <div class="alert">
+          <strong>Already have an account?</strong>  Login <a class= "ml-2" href="login.html">here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

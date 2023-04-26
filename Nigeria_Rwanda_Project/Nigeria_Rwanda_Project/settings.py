@@ -57,7 +57,12 @@ ROOT_URLCONF = 'Nigeria_Rwanda_Project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+                # Add the Users app templates directory first
+            os.path.join(BASE_DIR, 'users', 'templates'),
+            # Add other directories as needed
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
