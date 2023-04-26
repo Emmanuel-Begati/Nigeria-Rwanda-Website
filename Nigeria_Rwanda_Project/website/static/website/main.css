@@ -530,4 +530,57 @@ h2 {
   transform: scale(1.1);
 }
 
+  /* Center the form */
+  #sign-up form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  #sign-up form input[type="text"], 
+  #sign-up form input[type="password"], 
+  #sign-up form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #bccebd;
+  }
+  
+  #sign-up form input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3fb553;
+    color: #65df55;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #sign-up form input[type="submit"]:hover {
+    background-color: #142c12;
+  }
+  
+  #sign-up form label {
+    color: #416d45;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .alert {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #0c0808;
+    background-color:transparent;
+  }
+  
+  .alert a {
+    color: #3f51b5;
+    text-decoration: none;
+  }
+  
+  .alert a:hover {
+    text-decoration: underline;
+  }
   
