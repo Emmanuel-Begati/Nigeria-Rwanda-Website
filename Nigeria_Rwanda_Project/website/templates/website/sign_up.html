@@ -1,47 +1,25 @@
-
-
 {% extends 'website/base.html' %}
 {% load static %}
 {% block content %}
-          
-		  <div class="container mt-5" id="sign-up">
-            <div class="row justify-content-center">
-              <div class="col-md-6">
-                <h2 class="text-center mb-4">Sign Up</h2>
-                <form method="POST" action="/submit-form/">
-                  <div class="mb-3">
-                    <label for="firstName" class="form-label">First Name</label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="secondName" class="form-label">Second Name</label>
-                    <input type="text" class="form-control" id="secondName" placeholder="Enter your second name" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="middleName" class="form-label">Middle Name (if any)</label>
-                    <input type="text" class="form-control" id="middleName" placeholder="Enter your middle name (if any)">
-                  </div>
-                  <div class="mb-3">
-                    <label for="dob" class="form-label">Date of Birth</label>
-                    <input type="date" class="form-control" id="dob" required>
-                  </div>
-                  <div class="mb-3">
-                    <label for="country" class="form-label">Country of Origin</label>
-                    <select class="form-select" id="country" required>
-                      <option value="">Select your country</option>
-                      <option value="Nigeria">Nigeria</option>
-                      <option value="Rwanda">Rwanda</option>
-                      <!-- Add more options as needed -->
-                    </select>
-                  </div>
-                  <div class="text-center">
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                  </div>
-                </form>
-				<div class="alert">
-				<strong>Already have an account?</strong><br> Login here <a href="login.html">here</a>
-				</div>
-              </div>
-            </div>
+
+
+
+
+  <div class="container mt-5" id="sign-up">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h2 class="text-center mb-4">Sign Up</h2>
+        <form method="POST" class="signup-form">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Sign Up</button>
           </div>
-	{% endblock %}
+        </form>
+        <div class="alert">
+          <strong>Already have an account?</strong><br> Login <a href="login.html">here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

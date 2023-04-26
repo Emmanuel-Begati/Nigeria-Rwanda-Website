@@ -8,5 +8,5 @@ path ('', views.home, name='website-home')
 , path ('about', views.about, name='website-about'),
 path ('contact-us', views.contact, name='website-contact'),
 path('login/', views.login, name='website-login'),
-path ('sign-up', views.sign_up, name='website-sign_up')
+path ('sign_up', views.sign_up, name='website-sign_up')
 ]

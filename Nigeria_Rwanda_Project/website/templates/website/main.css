@@ -102,6 +102,13 @@ max-height: 100%;}
   }
  
 }
+
+
+
+
+
+
+
 /* ------------------------------------------------------------------------------------------------------------------------------- */
 
 div .bg-image {
@@ -156,15 +163,15 @@ footer .btn {
 #learn-more{
   text-align: center;
   font-size: x-large;
-}
-
-#sign-up{
+ }
+/* #sign-up{
   padding: 200px;
   margin-bottom: 300px;
   width: 1000px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* add a box-shadow */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* add a box-shadow 
 
-}
+} */
+
 @media screen and (max-width: 768px) {
   div .bg-image {
     height: 300px;
@@ -528,4 +535,49 @@ h2 {
   transform: scale(1.1);
 }
 
-  
+
+.signup-form label {
+  font-weight: bold;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form select,
+.signup-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.signup-form select {
+  padding: 6px;
+}
+
+.signup-form textarea {
+  height: 150px;
+}
+
+.signup-form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.alert {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
