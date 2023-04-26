@@ -29,7 +29,7 @@
 				  <a class="nav-link" href="{% url 'website-about' %}">About</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="{% url 'website-contact' %}">Contact Us</a>
+				  <a class="nav-link" href="{% url 'website-contact' %}">ContactUs</a>
 				</li>
 				<li class="nav-item">
 				  <a class="nav-link" href="{% url 'website-home' %}">Resources</a>
@@ -49,13 +49,17 @@
 			
 			<div style="margin-right: 100px;">
 				<ul class="navbar-nav ml-auto">
-				  {% if user.is_authenticated %}
+					{% if user.is_authenticated %}
 					<li class="nav-item">
-					  <form method="post" >
-						{% csrf_token %}
-						<a class="nav-link btn btn-success" href="{% url 'website-profile' %}">Profile</a>
-						<a class="nav-link btn btn-success" href="{% url 'website-logout' %}">Logout</a>
-					  </form>
+						<form method="post">
+							{% csrf_token %}
+							<div class="btn-group" role="group">
+								<a class="btn btn-success" href="{% url 'website-profile' %}">Profile</a>
+								<a class="btn btn-success" href="{% url 'website-logout' %}">Logout</a>
+							</div>
+						</form>
+					</li>
+					  
 					</li>
 				  {% else %}
 					<li class="nav-item">
