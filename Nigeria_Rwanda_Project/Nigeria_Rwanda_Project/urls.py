@@ -23,6 +23,6 @@ from users import views as users_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sign_up/', users_views.sign_up, name='sign_up'),
+    path('sign_up/', users_views.sign_up, name='website-sign_up'),
     path('', include('website.urls' ))
 ]

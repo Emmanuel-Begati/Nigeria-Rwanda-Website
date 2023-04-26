@@ -536,48 +536,44 @@ h2 {
 }
 
 
-.signup-form label {
-  font-weight: bold;
+/* Center the form */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* Style the form fields */
 .signup-form input[type="text"],
 .signup-form input[type="email"],
-.signup-form input[type="password"],
-.signup-form select,
-.signup-form textarea {
+.signup-form input[type="password"] {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-.signup-form select {
-  padding: 6px;
-}
-
-.signup-form textarea {
-  height: 150px;
-}
-
-.signup-form button[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
+  padding: 10px;
+  margin-bottom: 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+/* Style the button */
+.signup-form button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
   cursor: pointer;
 }
 
+/* Hover effect on the button */
 .signup-form button[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #0069d9;
 }
 
+/* Style the alert box */
 .alert {
-  background-color: #f2f2f2;
-  padding: 20px;
+  text-align: center;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
+
