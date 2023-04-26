@@ -9,8 +9,7 @@ path ('', views.home, name='website-home')
 path ('contact-us', views.contact, name='website-contact'),
 path('login/', views.login, name='website-login'),
 <<<<<<< HEAD
-path ('sign_up', views.sign_up, name='website-sign_up')
+path ('sign_up', views.sign_up, name='website-sign_up'),
 =======
 path ('sign-up', views.sign_up, name='website-sign-up')
->>>>>>> parent of 724bec6 (sign up issue fixed)
-]
+>>>>>>> parent of 724bec6 (sign up issue fixed)]
