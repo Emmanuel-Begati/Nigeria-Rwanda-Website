@@ -19,6 +19,9 @@ from django.urls import path
 from django.urls import include
 from users import views as users_views
 from django.contrib.auth import views as auth_views
+from contact_form.views import contact_view 
+
+
 
 
 
@@ -28,5 +31,8 @@ urlpatterns = [
      path('profile/', users_views.profile, name='website-profile'),
     path('', include('website.urls' )),
     path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='website-login'),
-    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='website-logout')
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='website-logout'),
+    path('contact-us/', contact_view, name='website-contact'),
+    
+    
 ]

@@ -32,6 +32,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'contact_form.apps.ContactFormConfig',
     'users.apps.UsersConfig',
     'website.apps.WebsiteConfig',
     'django.contrib.admin',
@@ -135,3 +138,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = 'website-home'
 LOGIN_URL = 'website-login'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
