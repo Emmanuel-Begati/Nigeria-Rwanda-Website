@@ -17,7 +17,7 @@ def sign_up(request):
             return redirect('website-login')
     else:
         form = SignUpForm()
-    return render(request, 'website/sign_up.html', {'form': form})
+    return render(request, 'users/sign_up.html', {'form': form})
     
 @login_required
 def profile(request):

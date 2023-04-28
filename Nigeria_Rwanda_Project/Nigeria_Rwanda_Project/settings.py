@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'newsletter.apps.NewsletterConfig',
     'crispy_forms',
     'crispy_bootstrap4',
     'contact_form.apps.ContactFormConfig',

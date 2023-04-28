@@ -13,15 +13,17 @@
             </div>
           </div>    
           <hr class="content-divider">
-          <div class="container">
+          <div class="container mt-5" id="sign-up">
             <div class="row">
               <div class="col-md-8 mx-auto">
                 <h1>Contact Us</h1>
-                <form method="post" class="uniForm">
+                <br>
+                <form method="POST" class="signup-form">
                   {% csrf_token %}
                   {{ form|crispy }}
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary" style="margin-top: 20px; background-color: darkolivegreen;" >Submit</button>
                 </form>
+
               </div>
             </div>
           </div>

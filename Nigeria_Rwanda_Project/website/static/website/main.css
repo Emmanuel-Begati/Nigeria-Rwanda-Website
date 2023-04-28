@@ -580,4 +580,120 @@ h2 {
   .alert a:hover {
     text-decoration: underline;
   }
+  #newsletter-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
   
+  .newsletter-btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4da876;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  #newsletter-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+  }
+  
+  #newsletter-popup h3 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+  }
+  
+  #newsletter-popup p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  #newsletter-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #newsletter-popup input[type="email"] {
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  #newsletter-popup button[type="submit"] {
+    width: 100%;
+    max-width: 400px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(54, 190, 106);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #newsletter-popup button[type="submit"]:hover {
+    background-color: rgb(33, 148, 88);
+  }
+
+  #close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#close-btn:hover {
+  color: black;
+}
+  
+  @media screen and (max-width: 768px) {
+    #newsletter-popup {
+      width: 80%;
+      height: auto;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+ 
+    #newsletter-btn {
+      bottom: 10px;
+      right: 10px;
+    }
+  
+    .newsletter-btn-link {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
