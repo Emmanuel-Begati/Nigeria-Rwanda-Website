@@ -37,6 +37,7 @@
 			</ul>
 			</div>
 			<div id="newsletter-btn">
+				
 				<a href="javascript:void(0)" class="newsletter-btn-link" id="newsletter-link">
 				  Subscribe to our monthly newsletter
 				</a>
@@ -162,71 +163,99 @@
 
 		</script>
 		<script>
-								// Get the newsletter button element
-					var newsletterBtn = document.getElementById("newsletter-btn");
-
-					// Add a click event listener to the newsletter button
-					newsletterBtn.addEventListener("click", function(event) {
-					// Prevent the default behavior of the link
+			// Get the newsletter button element
+			var newsletterBtn = document.getElementById("newsletter-btn");
+		
+			// Add a click event listener to the newsletter button
+			newsletterBtn.addEventListener("click", function(event) {
+				// Prevent the default behavior of the link
+				event.preventDefault();
+		
+				// Show the newsletter form pop-up
+				showNewsletterForm();
+			});
+		
+			// Function to show the newsletter form pop-up
+			function showNewsletterForm() {
+				// Create the pop-up element
+				var newsletterPopup = document.createElement("div");
+				newsletterPopup.setAttribute("id", "newsletter-popup");
+		
+				// Create the form element
+				var newsletterForm = document.createElement("form");
+				newsletterForm.setAttribute("id", "newsletter-form");
+				newsletterForm.setAttribute("method", "POST");
+				newsletterForm.setAttribute("action", "{% url 'newsletter_signup' %}");
+		
+				// Create the CSRF token input field
+				var csrfInput = document.createElement("input");
+				csrfInput.setAttribute("type", "hidden");
+				csrfInput.setAttribute("name", "csrfmiddlewaretoken");
+				csrfInput.setAttribute("value", getCookie("csrftoken"));
+		
+				// Create the email input field
+				var emailInput = document.createElement("input");
+				emailInput.setAttribute("type", "email");
+				emailInput.setAttribute("name", "email");
+				emailInput.setAttribute("placeholder", "Enter your email address");
+				emailInput.setAttribute("required", "");
+		
+				// Create the submit button
+				var submitBtn = document.createElement("button");
+				submitBtn.setAttribute("type", "submit");
+				submitBtn.innerHTML = "Subscribe";
+		
+				// Create the close button
+				var closeBtn = document.createElement("button");
+				closeBtn.setAttribute("type", "button");
+				closeBtn.setAttribute("id", "close-btn");
+				closeBtn.innerHTML = "&times;";
+		
+				// Add a click event listener to the close button
+				closeBtn.addEventListener("click", function(event) {
+					newsletterPopup.remove();
+				});
+		
+				// Append the CSRF token, email input, submit button, and close button to the form
+				newsletterForm.appendChild(csrfInput);
+				newsletterForm.appendChild(emailInput);
+				newsletterForm.appendChild(submitBtn);
+				newsletterForm.appendChild(closeBtn);
+		
+				// Append the form to the pop-up element
+				newsletterPopup.appendChild(newsletterForm);
+		
+				// Add the pop-up element to the page
+				document.body.appendChild(newsletterPopup);
+				
+				// Add an event listener to the form submission
+				newsletterForm.addEventListener("submit", function(event) {
 					event.preventDefault();
-
-					// Show the newsletter form pop-up
-					showNewsletterForm();
-					});
-
-					// Function to show the newsletter form pop-up
-					function showNewsletterForm() {
-					// Create the pop-up element
-					var newsletterPopup = document.createElement("div");
-					newsletterPopup.setAttribute("id", "newsletter-popup");
-
-					// Create the form element
-					var newsletterForm = document.createElement("form");
-					newsletterForm.setAttribute("id", "newsletter-form");
-					newsletterForm.setAttribute("method", "POST");
-					newsletterForm.setAttribute("action", "{% url 'newsletter_signup' %}");
-
-					// Create the CSRF token input field
-					var csrfInput = document.createElement("input");
-					csrfInput.setAttribute("type", "hidden");
-					csrfInput.setAttribute("name", "csrfmiddlewaretoken");
-					csrfInput.setAttribute("value", getCookie("csrftoken"));
-
-					// Create the email input field
-					var emailInput = document.createElement("input");
-					emailInput.setAttribute("type", "email");
-					emailInput.setAttribute("name", "email");
-					emailInput.setAttribute("placeholder", "Enter your email address");
-					emailInput.setAttribute("required", "");
-
-					// Create the submit button
-					var submitBtn = document.createElement("button");
-					submitBtn.setAttribute("type", "submit");
-					submitBtn.innerHTML = "Subscribe";
-
-					// Create the close button
-					var closeBtn = document.createElement("button");
-					closeBtn.setAttribute("type", "button");
-					closeBtn.setAttribute("id", "close-btn");
-					closeBtn.innerHTML = "&times;";
-
-					// Add a click event listener to the close button
-					closeBtn.addEventListener("click", function(event) {
-						newsletterPopup.remove();
-					});
-
-					// Append the CSRF token, email input, submit button, and close button to the form
-					newsletterForm.appendChild(csrfInput);
-					newsletterForm.appendChild(emailInput);
-					newsletterForm.appendChild(submitBtn);
-					newsletterForm.appendChild(closeBtn);
-
-					// Append the form to the pop-up element
-					newsletterPopup.appendChild(newsletterForm);
-
-					// Add the pop-up element to the page
-					document.body.appendChild(newsletterPopup);
-					}
+					
+					// Get the email value from the form
+					var email = emailInput.value;
+					
+					// Send a GET request to the server to check if the email already exists
+					var xhr = new XMLHttpRequest();
+					xhr.open("GET", "{% url 'check_email' %}?email=" + email);
+					xhr.onload = function() {
+						if (xhr.status === 200) {
+							var data = JSON.parse(xhr.responseText);
+							if (data.exists) {
+								// Show an error message on the pop-up
+								var errorMessage = document.createElement("p");
+								errorMessage.innerHTML = "This email address has already been subscribed.";
+								errorMessage.setAttribute("class", "error-message");
+								newsletterForm.insertBefore(errorMessage, submitBtn);
+							} else {
+								// Submit the form if the email does not already exist
+								newsletterForm.submit();
+							}
+						}
+					};
+					xhr.send();
+				});
+			}
 
 					// Function to retrieve the CSRF token from the cookie
 					function getCookie(name) {
@@ -243,7 +272,7 @@
 					}
 					return cookieValue;
 					}
-
+					
 		  </script>
 		  
 		  

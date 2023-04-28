@@ -21,6 +21,7 @@ from users import views as users_views
 from django.contrib.auth import views as auth_views
 from contact_form.views import contact_view 
 from newsletter.views import subscribe as newsletter_views
+from newsletter.views import check_email 
 
 
 
@@ -34,6 +35,6 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='website-logout'),
     path('contact-us/', contact_view, name='website-contact'),
     path('subscribe/', newsletter_views, name='newsletter_signup'),
-
+    path('check_email/', check_email, name='check_email')
     
 ]

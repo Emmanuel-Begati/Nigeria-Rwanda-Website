@@ -1,0 +1,25 @@
+
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+        
+        <div class="container mt-5" id="sign-up">
+            <div class="row justify-content-center" >
+              <div class="col-md-6">
+                <h2> Thank you for subscribing to our newsletter! 
+                  We're thrilled to have you as part of our community. 
+                  You'll be the first to know about new products, exciting updates, and exclusive offers. 
+                  We can't wait to share our journey with you. Welcome aboard! </h2>      
+                <div class="alert alert-success" role="alert">
+                <br> Would you like to revisit the home page? <a href="{% url 'website-home' %}">Click here</a>
+              </div>
+              </div>
+            </div>
+          </div>
+         
+      {% endblock %}  
+			
+         
+
+
+
