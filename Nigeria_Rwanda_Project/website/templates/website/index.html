@@ -1,51 +1,39 @@
 		 {% extends 'website/base.html' %}
 		 {% load static%}		 
 		{% block content%}
-			<div id="whole">
-			<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-				<div class="carousel-inner">
-				<div class="carousel-item active" id="myCorousel3">
-
-					<div class="bg-image" style="background-image: url('{% static 'website/faustin-t-cryqKSeLX74-unsplash.jpg' %}') " id="nav-img3">
-						<div class="content align-items-center" >
-						<h1 class="font-effect-3d" >W E L C O M E!!!</h1>
-						<h1 class="font-effect-3d"> For the Love of both Countries</h1>
-
-						<br>
-						<br>
-						<br>
-						<!-- <a href="#" class="btn btn-success" id='learn-more'>Learn More</a> -->
-					</div>
-					</div>
-				</div>
-				<div class="carousel-item" id="myCorousel1">
-					<div class="bg-image" style="background-image: url('{% static 'website/conventioncenter.jpg' %}') " id="nav-img3">
-						<div class="content" >
-						<h1 class="font-effect-3d" >W E L C O M E!!!</h1>
-						<h1 class="font-effect-3d" > For the Love of both Countries</h1>
-						<br>
-						<br>
-						<br>
-						<!-- <a href="#" class="btn btn-success" id='learn-more'>Learn More</a> -->
-					</div>
-					</div>
-				</div>
-				<div class="carousel-item" id="myCorousel2">
-					<div class="bg-image" style="background-image: url('{% static 'website/mike-arney-rJ5vHo8gr2U-unsplash.jpg' %}') " id="nav-img3">
-						<div class="content">
-						<h1 class="font-effect-3d">W E L C O M E!!!</h1>
-						<h1 class="font-effect-3d" > For the Love of both Countries</h1>
-						<br>
-						<br>
-						<br>
-						<!-- <a href="#" class="btn btn-success" id='learn-more'>Learn More</a> -->
-					</div>
-					</div>
-				</div>
-				</div>
-				</a>
-			</div>
+				<section class="carousel">
+					<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+						<div class="carousel-inner">
+						  <div class="carousel-item active" id="myCarousel3">
+							<div class="bg-image" style="background-image: url('{% static 'website/faustin-t-cryqKSeLX74-unsplash.jpg' %}')">
+							  <div class="content align-items-center">
+								<h1 class="font-effect-3d" style="font-size: 5em;">W E L C O M E!!!</h1>
+								<h1 class="font-effect-3d" style="font-size: 3em;">For the Love of both Countries</h1>
+							  </div>
+							</div>
+						  </div>
+						  <div class="carousel-item" id="myCarousel1">
+							<div class="bg-image" style="background-image: url('{% static 'website/conventioncenter.jpg' %}')">
+							  <div class="content">
+								<h1 class="font-effect-3d" style="font-size: 5em;">W E L C O M E!!!</h1>
+								<h1 class="font-effect-3d" style="font-size: 3em;">For the Love of both Countries</h1>
+							  </div>
+							</div>
+						  </div>
+						  <div class="carousel-item" id="myCarousel2">
+							<div class="bg-image" style="background-image: url('{% static 'website/mike-arney-rJ5vHo8gr2U-unsplash.jpg' %}')">
+							  <div class="content">
+								<h1 class="font-effect-3d" style="font-size: 5em;">W E L C O M E!!!</h1>
+								<h1 class="font-effect-3d" style="font-size: 3em;">For the Love of both Countries</h1>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					  </div>
+				  </section>
 					<br>
+					<div id="whole">
+
 					<div>				
 						<hr class="content-divider">					
 					<div class="about-us-container">
