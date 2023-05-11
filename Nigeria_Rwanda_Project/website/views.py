@@ -7,6 +7,8 @@ from django.contrib.auth import logout
 # Create your views here.
 def home(request):
     return render(request, 'website/index.html')
+def resources(request):
+    return render(request, 'website/resources.html')
 def contact(request):
     return render(request, 'website/contact_us.html')
 def about(request):

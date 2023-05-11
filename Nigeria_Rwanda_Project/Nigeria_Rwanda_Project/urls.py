@@ -36,5 +36,5 @@ urlpatterns = [
     path('contact-us/', contact_view, name='website-contact'),
     path('subscribe/', newsletter_views, name='newsletter_signup'),
     path('check_email/', check_email, name='check_email')
-    
+
 ]
