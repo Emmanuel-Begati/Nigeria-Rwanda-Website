@@ -151,24 +151,14 @@ max-height: 100%;}
 }
 
 .carousel h1 {
-  font-size: 5em;
+  font-size: 6em;
   margin-bottom: 0.2em;
 }
 
 .carousel h2 {
-  font-size: 2em;
+  font-size: 4em;
   margin-bottom: 1em;
 }
-
-/* div .content {
-text-align: center;
-color:rgba(52, 136, 4, 0.795);
-position:relative; 
-top: 10%;
-bottom: 50%;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-text-shadow: 3px 3px 3px #ababab;
-} */
 #learn-more{
   text-shadow: none;
 }
@@ -179,7 +169,7 @@ text-shadow: 3px 3px 3px #ababab;
 }
 
 #logo{
-  margin-top: 10px;
+  margin-top: 0px;
   height: 80px;
   width: 80px;
 }
@@ -210,45 +200,17 @@ footer .btn {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* add a box-shadow */
 
 }
-/* @media screen and (max-width: 768px) {
-  div .bg-image {
-    height: 300px;
-    width: 700px;
-    margin: 0;
-    background-position: top;
+ @media screen and (max-width: 768px) {
+  .carousel h1 {
+    font-size: 3em;
+    margin-bottom: 0.2em;
   }
   
-  div .content {
-    font-size: 24px;
-    margin-right: 325px;
-    
-
+  .carousel h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
   }
-  
-  #logo {
-    height: 50px;
-    width: 50px;
-  }
-  
-  footer .btn {
-    margin: 5px;
-    font-size: 14px;
-  }
-  
-  #sign-up {
-    padding: 50px;
-    margin-bottom: 100px;
-    width: 100%;
-    box-shadow: none;
-  }
-  .font-effect-3d{
-    text-align: center;
-    margin-top: 150px;
-    font-size: 30px;
-    color: rgb(83, 146, 119);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-} */
+}
 
 /* -----------------------------------------The about-us writeup in the homepage-------------------------------------------- */
 .about-us-container {
@@ -718,7 +680,7 @@ h2 {
   top: 10px;
   right: 10px;
   font-size: 20px;
-  color: white;
+  color: rgb(71, 9, 9);
   background-color: transparent;
   border: none;
   outline: none;
