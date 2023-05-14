@@ -12,27 +12,15 @@
 	<link href="{% static '/website/main.css' %}" rel="stylesheet">
 	</head>
 	<body>
-<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">			
+<!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">			
 	<a class="navbar-brand" href="#">
 				<img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"  alt="Logo" id="logo">
 				Nigeria-Rwanda Friendship Club</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			  <span class="navbar-toggler-icon"><ul class="navbar-nav mr-auto">
-				<li class="nav-item active">
-				  <a class="nav-link" href="{% url 'website-home' %}">Home</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="{% url 'website-about' %}">About</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="{% url 'website-contact' %}">ContactUs</a>
-				</li>
-				<li class="nav-item">
-				  <a class="nav-link" href="{% url 'website-resources' %}">Resources</a>
-				</li>
-			</ul></span>
+			  <span class="navbar-toggler-icon"></span>
 			</button>
 		  
+
 			<div class="collapse navbar-collapse" id="navbarNav">
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
@@ -87,10 +75,24 @@
 				</ul>
 			  </div>
 			  
-		</nav>	
+		</nav>	 -->
 		
-			  
-			
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" >
+		<ul class="nav justify-content-end">
+			<li class="nav-item">
+			  <a class="nav-link active" aria-current="page" href="#">Active</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Link</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link disabled">Disabled</a>
+			</li>
+		  </ul>
+		</nav>
 			<div id="whole">  
 				
 			  {% block content %} {% endblock %}
