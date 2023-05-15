@@ -15,9 +15,9 @@ def contact_view(request):
             contact = Contact.objects.create(name=name, email=email, message=message)
             contact.save()
 
-        with open('contacts.csv', 'a', newline='') as csvfile:
-                writer = csv.writer(csvfile)
-                writer.writerow([name, email, message])
+            with open('contacts.csv', 'a', newline='') as csvfile:
+                    writer = csv.writer(csvfile)
+                    writer.writerow([name, email, message])
         return render(request, 'contact_form/contact_success.html', {'form': form})
             
     else:
