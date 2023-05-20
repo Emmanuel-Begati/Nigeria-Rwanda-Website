@@ -246,6 +246,7 @@ footer .btn {
 .about-us-container {
    padding: 50px;
   margin-top: 50px;
+  margin-left: 50px;
 
 }
 
@@ -311,6 +312,28 @@ footer .btn {
 }
 .img-fluid{
   margin-left: 100px;
+}
+
+#watermark {
+  /* position: absolute; */
+  top: -0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  opacity: 0.3 !important;
+}
+#about{
+  position: relative;
+      z-index: 1;
+} 
+
+
+
+#about-page{
+  position: relative;
+  margin-left:50px ;
+  margin-top: 100px;
+  text-align: justify;
 }
 /* ------------------------------------------------------------------------------------------------------------------- */
 /* @media screen and (max-width: 768px) {
@@ -496,6 +519,7 @@ h2 {
 
 .image-container {
   position: relative;
+  text-align: justify;
 }
 
 

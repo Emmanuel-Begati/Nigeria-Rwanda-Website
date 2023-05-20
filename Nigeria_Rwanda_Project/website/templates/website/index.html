@@ -36,20 +36,23 @@
 				  </section>
 					<br>
 					<div id="whole">
-
+							
 					<div>				
 						<hr class="content-divider">					
 					<div class="about-us-container">
-						<div class="row align-items-center">
+						<!-- <div class="watermark"> <img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"> </div> -->
+						<div class="row align-items-center" id="about">
 						<div class="col-md-6">
+							<!-- <div class="watermark"> <img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"> </div> -->
 							<div class="about-us-graphic"  style="background-image: url('{% static '/website/about.jpg' %}') ">
 								<h2 class="about-us-title">About Us</h2>
 							</div>
 						</div>
+						<!-- <div class="watermark"> <img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"> </div> -->
 						<div class="col-md-6">
 							<div class="about-us-text">
 							<p>The Nigeria-Rwanda Friendship Club is a community that promotes unity, peace, and love between Nigeria and Rwanda. Our goal is to create a bridge between these two countries and strengthen the bonds of friendship.</p>
-							<a href="{% url 'website-about' %}"" class="btn btn-success">Learn More</a>
+							<a href="{% url 'website-about' %}" class="btn btn-success">Learn More</a>
 							</div>
 						</div>
 						</div>
@@ -58,14 +61,14 @@
 					<div class="container">
 						<h2 class="text-center mb-5" style="color: rgb(12, 78, 12);">What Do We Do?</h2>
 						<div class="image-container row align-items-center mb-5">
-							
+
 						<div class="col-md-6 order-2 order-md-1">
 							<h3>Investment Opportunities</h3>
 							<p>We offer a platform to showcase investment opportunities in both Nigeria and Rwanda, ranging from stocks and bonds to real estate and other investment products. Our aim is to provide potential investors with access to a variety of investment options and help them make informed investment decisions.</p>
 						</div>
 						<div class="image-container col-md-6 order-1 order-md-2 mb-5 mb-md-0" id="wdwd-img">
 							<img src="{% static 'website/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg' %}" class="squircle" alt="Service Image" >
-							
+
 						</div>
 						</div>
 						<div class="image-container row align-items-center mb-5">
@@ -79,6 +82,7 @@
 								market forecasts.</p>
 						</div>
 						</div>
+
 						<div class="image-container row align-items-center mb-5">
 							
 							<div class="col-md-6 order-2 order-md-1">
