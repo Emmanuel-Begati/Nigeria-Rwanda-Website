@@ -225,7 +225,7 @@ footer .btn {
 
 #sign-up{
   padding: 200px;
-  margin-bottom: 300px;
+  margin: auto;
   width: 1000px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* add a box-shadow */
 
