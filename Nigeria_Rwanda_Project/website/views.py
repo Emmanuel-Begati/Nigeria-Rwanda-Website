@@ -24,7 +24,7 @@ def login(request):
         else:
             return render(request, 'login.html', {'error': 'Invalid login credentials'})
      else: 
-         return render(request, 'website/login.html')
+         return render(request, 'users/login.html')
         
 
 

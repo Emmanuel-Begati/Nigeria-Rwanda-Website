@@ -633,16 +633,20 @@ h2 {
   }
   
   .alert {
-    display: flex;
+    /* display: flex; */
     margin-top: auto;
     font-size: 14px;
     color: #0c0808;
     background-color:rgb(47, 196, 47);
+    padding: auto;
+    margin: auto;
   }
   
   .alert a {
     color: #3f51b5;
     text-decoration: none;
+    margin: auto;
+    padding: auto;
   }
   
   .alert a:hover {
