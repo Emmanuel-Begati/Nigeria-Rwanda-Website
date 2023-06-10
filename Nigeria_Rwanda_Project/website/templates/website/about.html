@@ -1,8 +1,10 @@
 			{% extends 'website/base.html' %}
 			{% load static %}
 			{% block content %}
-					<div class="container" id="about-page">
+					<div class=" about container" id="about-page">
 						<div class="row">
+
+													<!-- About us content -->
 						<div class="col-md-6">
 							<h2 style="text-align: center;">About Us</h2>
 							<p>Cross-country investment faces several challenges, including language and cultural barriers,
@@ -36,10 +38,15 @@
 						</div>
 						</div>
 						</div>
+
 						<hr class="content-divider">
+
+													<!-- Meet the team session -->
 						<div class="container">
 							<h2 class="text-center mb-5">Meet the Team</h2>
 							<div class="row justify-content-center">
+
+										<!-- Person 1 -->
 							<div class="col-md-4 mb-4">
 								<div class="team-member text-center">
 								<img src="{% static 'website/tarik-haiga-BxELNNMN88Y-unsplash.jpg' %}" alt="Person 1" class="team-member img">
@@ -49,6 +56,8 @@
 								</div>
 								</div>
 							</div>
+
+										<!-- Person 2 -->
 							<div class="col-md-4 mb-4">
 								<div class="team-member text-center">
 								<img src="{% static 'website/tarik-haiga-BxELNNMN88Y-unsplash.jpg' %}" alt="Person 2" class="team-member img">
@@ -58,6 +67,8 @@
 								</div>
 								</div>
 							</div>
+
+										<!-- Person 3 -->
 							<div class="col-md-4 mb-4">
 								<div class="team-member text-center">
 								<img src="{% static 'website/tarik-haiga-BxELNNMN88Y-unsplash.jpg'%}" alt="Person 3" class="team-member img">
@@ -67,6 +78,7 @@
 								</div>
 								</div>
 							</div>
+
 							</div>
 						</div>
 					{% endblock %}

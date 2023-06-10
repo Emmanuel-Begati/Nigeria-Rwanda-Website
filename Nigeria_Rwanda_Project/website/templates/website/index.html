@@ -1,180 +1,208 @@
-		 {% extends 'website/base.html' %}
-		 {% load static%}		 
-		{% block content%}
-				<section class="carousel">
-					<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-						<div class="carousel-inner">
-						  <div class="carousel-item active" id="myCarousel3">
-							<div class="bg-image" style="background-image: url('{% static 'website/faustin-t-cryqKSeLX74-unsplash.jpg' %}')">
-							  <div class="content align-items-center">
-								<h1 class="font-effect-3d" >W E L C O M E!!!</h1>
-								<h2 class="font-effect-3d" >For the Love of both Countries</h2>
-							  </div>
-							  <!-- <div class="carousel-caption">
-								<h4 class=" font-effect-3d">We are glad to have you</h4>
-							</div> -->
-							</div>
-						  </div>
-						  <div class="carousel-item" id="myCarousel1">
-							<div class="bg-image" style="background-image: url('{% static 'website/conventioncenter.jpg' %}')">
-							  <div class="content">
-								<h1 class="font-effect-3d" >W E L C O M E!!!</h1>
-								<h2 class="font-effect-3d" >For the Love of both Countries</h2>
-							  </div>
-							</div>
-						  </div>
-						  <div class="carousel-item" id="myCarousel2">
-							<div class="bg-image" style="background-image: url('{% static 'website/mike-arney-rJ5vHo8gr2U-unsplash.jpg' %}')">
-							  <div class="content">
-								<h1 class="font-effect-3d">W E L C O M E!!!</h1>
-								<h2 class="font-effect-3d" >For the Love of both Countries</h2>
-							  </div>
-							</div>
-						  </div>
-						</div>
-					  </div>
-				  </section>
-					<br>
-					<div id="whole">
-							
-					<div>				
-						<hr class="content-divider">					
-					<div class="about-us-container">
-						<!-- <div class="watermark"> <img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"> </div> -->
-						<div class="row align-items-center" id="about">
-						<div class="col-md-6">
-							<!-- <div class="watermark"> <img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"> </div> -->
-							<div class="about-us-graphic"  style="background-image: url('{% static '/website/about.jpg' %}') ">
-								<h2 class="about-us-title">About Us</h2>
-							</div>
-						</div>
-						<!-- <div class="watermark"> <img src="{% static 'website/IMG-20230410-WA0175.jpg' %}"> </div> -->
-						<div class="col-md-6">
-							<div class="about-us-text">
-							<p>The Nigeria-Rwanda Friendship Club is a community that promotes unity, peace, and love between Nigeria and Rwanda. Our goal is to create a bridge between these two countries and strengthen the bonds of friendship.</p>
-							<a href="{% url 'website-about' %}" class="btn btn-success">Learn More</a>
-							</div>
+{% extends 'website/base.html' %}
+{% load static%}		 
+{% block content%}
+
+						<!-- This is the carousel part of the website -->
+		<section class="carousel">
+			<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+				<div class="carousel-inner">
+				
+															<!-- Carousel 1 -->
+					<div class="carousel-item active" id="myCarousel3">
+						<div class="bg-image" style="background-image: url('{% static 'website/faustin-t-cryqKSeLX74-unsplash.jpg' %}')">
+						<div class="content align-items-center">
+							<h1 class="font-effect-3d" >W E L C O M E!!!</h1>
+							<h2 class="font-effect-3d" >For the Love of both Countries</h2>
 						</div>
 						</div>
 					</div>
-					<hr class="content-divider">
-					<div class="container">
-						<h2 class="text-center mb-5" style="color: rgb(12, 78, 12);">What Do We Do?</h2>
-						<div class="image-container row align-items-center mb-5">
 
-						<div class="col-md-6 order-2 order-md-1">
-							<h3>Investment Opportunities</h3>
-							<p>We offer a platform to showcase investment opportunities in both Nigeria and Rwanda, ranging from stocks and bonds to real estate and other investment products. Our aim is to provide potential investors with access to a variety of investment options and help them make informed investment decisions.</p>
-						</div>
-						<div class="image-container col-md-6 order-1 order-md-2 mb-5 mb-md-0" id="wdwd-img">
-							<img src="{% static 'website/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg' %}" class="squircle" alt="Service Image" >
+															<!-- Carousel 2 -->
+				<div class="carousel-item" id="myCarousel1">
+					<div class="bg-image" style="background-image: url('{% static 'website/conventioncenter.jpg' %}')">
+					<div class="content">
+						<h1 class="font-effect-3d" >W E L C O M E!!!</h1>
+						<h2 class="font-effect-3d" >For the Love of both Countries</h2>
+					</div>
+					</div>
+				</div>
 
-						</div>
-						</div>
-						<div class="image-container row align-items-center mb-5">
-							<div class="col-md-6">
-							<img src="{% static '/website/hector-martinez-bzW21_SZM3Y-unsplash.jpg' %} " class="squircle" alt="Service Image" height="400px" width="700px" >
+															<!-- Carousel 3 -->
+				<div class="carousel-item" id="myCarousel2">
+					<div class="bg-image" style="background-image: url('{% static 'website/mike-arney-rJ5vHo8gr2U-unsplash.jpg' %}')">
+					<div class="content">
+						<h1 class="font-effect-3d">W E L C O M E!!!</h1>
+						<h2 class="font-effect-3d" >For the Love of both Countries</h2>
+					</div>
+					</div>
+				</div>
+
+
+				</div>
+			</div>
+		</section>
+			<br>
+															<!-- End of the carousel -->
+
+
+															<!-- About us section -->			
+				<hr class="content-divider">
+
+		<div class="about-us-container">
+				<div class="row align-items-center" id="about">
+				<div class="col-md-6">
+					<div class="about-us-graphic"  style="background-image: url('{% static '/website/about.jpg' %}') ">
+						<h2 class="about-us-title">About Us</h2>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="about-us-text">
+					<p>The Nigeria-Rwanda Friendship Club is a community that promotes unity, peace, and love between Nigeria and Rwanda. Our goal is to create a bridge between these two countries and strengthen the bonds of friendship.</p>
+					<a href="{% url 'website-about' %}" class="btn btn-success">Learn More</a>
+					</div>
+				</div>
+				</div>
+		</div>
+
+
+															<!-- End of about us section -->
+			<hr class="content-divider">
+
+															<!-- What do we do container -->
+
+
+		<div class="wdwd container">              	<!-- I gave two classes here note -->
+				<h2 class="text-center mb-5" style="color: rgb(12, 78, 12);">What Do We Do?</h2>
+
+				<div class="image-container row align-items-center mb-5">
+
+											<!-- WDWD 1 -->
+					<div class="col-md-6 order-2 order-md-1">
+						<h3>Investment Opportunities</h3>
+						<p>We offer a platform to showcase investment opportunities in both Nigeria and Rwanda, ranging from stocks and bonds to real estate and other investment products. 
+						Our aim is to provide potential investors with access to a variety of investment options and help them make informed investment decisions.</p>
+					</div>
+					<div class="image-container col-md-6 order-1 order-md-2 mb-5 mb-md-0" id="wdwd-img">
+						<img src="{% static 'website/mathieu-stern-1zO4O3Z0UJA-unsplash.jpg' %}" class="squircle" alt="Service Image" >
+					</div>
+				</div>
+											<!-- WDWD 2 -->
+				<div class="image-container row align-items-center mb-5">
+					<div class="col-md-6">
+					<img src="{% static '/website/hector-martinez-bzW21_SZM3Y-unsplash.jpg' %} " class="squircle" alt="Service Image" height="400px" width="700px" >
+					</div>
+					<div class="col-md-6">
+						<h3>Market Research</h3>
+						<p>Offer market research reports on the two countries to help investors make
+						informed investment decisions. This can include macroeconomic data, industry trends, and
+						market forecasts.</p>
+					</div>
+				</div>
+											<!-- WDWD 3 -->
+				<div class="image-container row align-items-center mb-5">
+					
+					<div class="col-md-6 order-2 order-md-1">
+						<h3>Investment Advice</h3>
+						<p>Provide personalized investment advice to investors based on their
+							investment goals, risk tolerance, and other factors. This can be done through a chatbot,
+							email or phone support.</p>
+					</div>
+					<div class="image-container col-md-6 order-1 order-md-2 mb-5 mb-md-0" id="wdwd-img">
+						<img src="{% static 'website/advice.jpg' %}" class="squircle" alt="Service Image" >
+						
+					</div>
+					</div>
+
+											<!-- WDWD 4 -->
+					<div class="image-container row align-items-center mb-5">
+						<div class="col-md-6">
+						<img src="{% static '/website/regulatory.jpg' %} " class="squircle" alt="Service Image" >
 						</div>
 						<div class="col-md-6">
-							<h3>Market Research</h3>
-							<p>Offer market research reports on the two countries to help investors make
-								informed investment decisions. This can include macroeconomic data, industry trends, and
-								market forecasts.</p>
+							<h3>Regulatory and Legal Support</h3>
+							<p>Offer regulatory and legal support to investors. This can
+								include information on the legal and regulatory environment of both countries, and
+								guidance on the process of investing in each country.</p>
 						</div>
-						</div>
-
-						<div class="image-container row align-items-center mb-5">
-							
-							<div class="col-md-6 order-2 order-md-1">
-								<h3>Investment Advice</h3>
-								<p>Provide personalized investment advice to investors based on their
-									investment goals, risk tolerance, and other factors. This can be done through a chatbot,
-									email or phone support.</p>
-							</div>
-							<div class="image-container col-md-6 order-1 order-md-2 mb-5 mb-md-0" id="wdwd-img">
-								<img src="{% static 'website/advice.jpg' %}" class="squircle" alt="Service Image" >
-								
-							</div>
-							</div>
-							<div class="image-container row align-items-center mb-5">
-								<div class="col-md-6">
-								<img src="{% static '/website/regulatory.jpg' %} " class="squircle" alt="Service Image" height="400px" width="700px" >
-							</div>
-							<div class="col-md-6">
-								<h3>Regulatory and Legal Support</h3>
-								<p>Offer regulatory and legal support to investors. This can
-									include information on the legal and regulatory environment of both countries, and
-									guidance on the process of investing in each country.</p>
-							</div>
-							</div>
 					</div>
-					<hr class="content-divider">
-					<div class="container">
-						<div class="row">
-						<div class="col-md-12">
-							<h2 class="text-center mb-5" style="color: rgb(12, 78, 12);">Why Us?</h2>
+			</div>
+											<!-- End of What We Do Container -->
+											
+			<hr class="content-divider">
+											<!-- Why us container -->
+
+			<div class="why-us container">    <!--Also gave two classes here -->
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="text-center mb-5" style="color: rgb(12, 78, 12);">Why Us?</h2>
+					</div>
+																<!-- First Reason -->
+					<div class="col-md-4 mb-5 mx-auto">
+						<div class="card h-200">
+						<img src="{% static '/website/towfiqu-barbhuiya-joqWSI9u_XM-unsplash.jpg' %}" class="card-img-top" alt="Investment and Economic Growth">
+						<div class="card-body">
+							<h3 class="card-title text-center">Increased investment and economic growth</h3>
+							<p class="card-text">Our platform is designed to promote investment between Nigeria and Rwanda, unlocking untapped potential and driving economic growth in both countries. This can result in job creation, increased tax revenue, and improved living standards for people in both countries.</p>
 						</div>
-						<div class="col-md-4 mb-5 mx-auto">
-							<div class="card h-200">
-							<img src="{% static '/website/towfiqu-barbhuiya-joqWSI9u_XM-unsplash.jpg' %}" class="card-img-top" alt="Investment and Economic Growth">
-							<div class="card-body">
-								<h3 class="card-title text-center">Increased investment and economic growth</h3>
-								<p class="card-text">Our platform is designed to promote investment between Nigeria and Rwanda, unlocking untapped potential and driving economic growth in both countries. This can result in job creation, increased tax revenue, and improved living standards for people in both countries.</p>
-							</div>
-							</div>
 						</div>
-						<div class="col-md-4 mb-5 mx-auto">
-							<div class="card h-100">
-							<img src="{% static '/website/kelly-sikkema-zcAgxLryKe4-unsplash.jpg' %}" class="card-img-top" alt="Improved Trade Relations">
-							<div class="card-body">
-								<h3 class="card-title text-center">Improved trade relations</h3>
-								<p class="card-text">By promoting investment and economic growth, our platform can help to strengthen trade relations between Nigeria and Rwanda. This can lead to increased exports and imports, as well as more collaboration between businesses in both countries.</p>
-							</div>
-							</div>
+					</div>
+																<!-- Second Reason -->
+					<div class="col-md-4 mb-5 mx-auto">
+						<div class="card h-100">
+						<img src="{% static '/website/kelly-sikkema-zcAgxLryKe4-unsplash.jpg' %}" class="card-img-top" alt="Improved Trade Relations">
+						<div class="card-body">
+							<h3 class="card-title text-center">Improved trade relations</h3>
+							<p class="card-text">By promoting investment and economic growth, our platform can help to strengthen trade relations between Nigeria and Rwanda. This can lead to increased exports and imports, as well as more collaboration between businesses in both countries.</p>
 						</div>
-						<div class="col-md-4 mb-5 mx-auto">
-							<div class="card h-100">
-							<img src="{% static '/website/linkedin-sales-solutions-8nGuPyGkOMI-unsplash.jpg' %}" class="card-img-top" alt="Enhanced Business Opportunities">
-							<div class="card-body">
-								<h3 class="card-title text-center">Enhanced business opportunities</h3>
-								<p class="card-text">Our platform connects investors, entrepreneurs, and businesses from both Nigeria and Rwanda, creating new business opportunities that may not have otherwise existed. This can lead to the development of new products and services, as well as increased innovation and competitiveness.</p>
-							</div>
-							</div>
 						</div>
-						<div class="col-md-4 mb-5 mx-auto">
-							<div class="card h-100">
-							<img src="{% static '/website/mimi-thian-vdXMSiX-n6M-unsplash (1).jpg' %}" class="card-img-top" alt="Improved Business Environment">
-							<div class="card-body">
-								<h3 class="card-title text-center">Improved business environment</h3>
-								<p class="card-text">Our platform provides investors with insights into the regulatory frameworks and business culture in Nigeria and Rwanda, which can help to improve the business environment in both countries. This can lead to a more conducive environment for doing business, attracting even more investment and fostering sustainable growth.</p>
-							</div>
-							</div>
+					</div>
+																<!-- Third Reason -->
+					<div class="col-md-4 mb-5 mx-auto">
+						<div class="card h-100">
+						<img src="{% static '/website/linkedin-sales-solutions-8nGuPyGkOMI-unsplash.jpg' %}" class="card-img-top" alt="Enhanced Business Opportunities">
+						<div class="card-body">
+							<h3 class="card-title text-center">Enhanced business opportunities</h3>
+							<p class="card-text">Our platform connects investors, entrepreneurs, and businesses from both Nigeria and Rwanda, creating new business opportunities that may not have otherwise existed. This can lead to the development of new products and services, as well as increased innovation and competitiveness.</p>
 						</div>
-						<div class="col-md-4 mb-5 mx-auto">
-							<div class="card h-100">
-							<img src="{% static '/website/clint-adair-BW0vK-FA3eg-unsplash.jpg' %}" class="card-img-top" alt="Improved Business Environment">
-							<div class="card-body">
-								<h3 class="card-title text-center">Strengthened bilateral relations</h3>
-								<p class="card-text">Our platform serves as a bridge between Nigeria and
-									Rwanda, creating opportunities for collaboration and mutual benefit. By strengthening
-									bilateral relations, we're contributing to peace and stability in the region, which can have
-									positive spill-over effects beyond Nigeria and Rwanda.</p>
-							</div>
-							</div>
 						</div>
-						<div class="col-md-4 mb-5 mx-auto">
-							<div class="card h-100">
-							<img src="{% static '/website/krakenimages-376KN_ISplE-unsplash.jpg' %}" class="card-img-top" alt="Improved Business Environment">
-							<div class="card-body">
-								<h3 class="card-title text-center">Collaboration and knowledge sharing</h3>
-								<p class="card-text">Through partnerships, joint ventures, and knowledge sharing, companies can leverage each other's strengths, resources, and expertise to drive innovation and enhance competitiveness. This collaboration can extend to various sectors such as agriculture, technology, manufacturing, and services.</p>
-							</div>
-							</div>
+					</div>
+																<!-- FOurth reason -->
+					<div class="col-md-4 mb-5 mx-auto">
+						<div class="card h-100">
+						<img src="{% static '/website/mimi-thian-vdXMSiX-n6M-unsplash (1).jpg' %}" class="card-img-top" alt="Improved Business Environment">
+						<div class="card-body">
+							<h3 class="card-title text-center">Improved business environment</h3>
+							<p class="card-text">Our platform provides investors with insights into the regulatory frameworks and business culture in Nigeria and Rwanda, which can help to improve the business environment in both countries. This can lead to a more conducive environment for doing business, attracting even more investment and fostering sustainable growth.</p>
 						</div>
-				
-				</div>
-				</div>
-				
-				
-				</div>
-		{% endblock%}
+						</div>
+					</div>
+																<!-- Fifth reason -->
+					<div class="col-md-4 mb-5 mx-auto">
+						<div class="card h-100">
+						<img src="{% static '/website/clint-adair-BW0vK-FA3eg-unsplash.jpg' %}" class="card-img-top" alt="Improved Business Environment">
+						<div class="card-body">
+							<h3 class="card-title text-center">Strengthened bilateral relations</h3>
+							<p class="card-text">Our platform serves as a bridge between Nigeria and
+								Rwanda, creating opportunities for collaboration and mutual benefit. By strengthening
+								bilateral relations, we're contributing to peace and stability in the region, which can have
+								positive spill-over effects beyond Nigeria and Rwanda.</p>
+						</div>
+						</div>
+					</div>
+																<!-- Sixth reason -->
+					<div class="col-md-4 mb-5 mx-auto">
+						<div class="card h-100">
+						<img src="{% static '/website/krakenimages-376KN_ISplE-unsplash.jpg' %}" class="card-img-top" alt="Improved Business Environment">
+						<div class="card-body">
+							<h3 class="card-title text-center">Collaboration and knowledge sharing</h3>
+							<p class="card-text">Through partnerships, joint ventures, and knowledge sharing, companies can leverage each other's strengths, resources, and expertise to drive innovation and enhance competitiveness. This collaboration can extend to various sectors such as agriculture, technology, manufacturing, and services.</p>
+						</div>
+						</div>
+					</div>
+		
+			</div>
+		</div>
+		
+		
+			
+{% endblock%}
